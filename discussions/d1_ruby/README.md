@@ -35,12 +35,12 @@ This method returns the first element `a` for which the code block returns true.
 # returns 2
 ```
 
-### `collect`
+### `collect!`
 The method applies the given code block to each element of an array and returns a new array.
 Using `collect!` modifies the array.
 ```rb
-[5, 4, 3].collect { |x| -x }
-# returns [-5, -4, 3]
+[5, 4, 3].collect! { |x| -x }
+# returns [-5, -4, -3]
 ```
 
 ## Code Block Exercises
@@ -85,7 +85,7 @@ def do_something_on_variable(variable, something)
   something.call(variable)
 end
 
-puts do_something_on_variable(2, square) # outputs 4
+puts do_something_on_variable(square, 2) # outputs 4
 ```
 
 You can also create nested Procs:
