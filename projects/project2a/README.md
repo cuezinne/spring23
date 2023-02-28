@@ -129,9 +129,7 @@ If you create a recursive helper function, the main function that calls the recu
   
 #### `is_prime x`
 - **Type**: `int -> bool`
-- **Description**: Returns whether or not `x` is prime.  Note that all negative numbers are non-prime. There are many ways to determine
-if a number is prime (for example, [Wilson's Theorem](https://en.wikipedia.org/wiki/Wilson%27s_theorem)). While we provide this resource, note that
-this function does not have to be implemented in this way.
+- **Description**: Returns whether or not `x` is prime.  Note that all negative numbers are non-prime.
 - **Examples**:
   ``` ocaml
   is_prime 1 = false
@@ -168,6 +166,8 @@ of
   ```
 
 # Part 3: Lists
+
+These may be implemented recursively, but it is not required.
 
 #### `reverse lst`
 
@@ -256,6 +256,7 @@ of
 # Part 4: Higher Order Functions
 
 Write the following functions using `map`, `fold`, or `fold_right` as defined in the file `funs.ml`. You **must** use `map`, `fold`, or `fold_right` to complete these functions, so none of the functions in Part 4 should be defined using the `rec` keyword. You also may not create recursive helper functions. You will lose points if this rule is not followed. 
+You are allowed to use previously defined non-recursive functions, but you should not need to.
 
 #### `is_present lst x`
 
