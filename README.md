@@ -11,6 +11,7 @@ List of projects:
 + [Project 3](https://classroom.github.com/a/CEG7_xgA) ([README](https://github.com/cmsc330-umd/spring23/tree/main/projects/project3))
 + [Project 4a](https://classroom.github.com/a/pErNAnwo) ([README](https://github.com/cmsc330-umd/spring23/tree/main/projects/project4a))
 + [Project 4b](https://classroom.github.com/a/0TS9TRaA) ([README](https://github.com/cmsc330-umd/spring23/tree/main/projects/project4b))
++ [Project 5](https://classroom.github.com/a/8F_d4oNX) ([README](https://github.com/cmsc330-umd/spring23/tree/main/projects/project5))
 
 List of discussions:
 + [Discussion 0 - Git](https://github.com/cmsc330-umd/spring23/tree/main/discussions/d0_git)
@@ -23,3 +24,5 @@ List of discussions:
 + [Discussion 7 - Operational Semantics](https://github.com/cmsc330-umd/spring23/tree/main/discussions/d7_opsem)
 + [Discussion 8 - Context Free Grammars](https://github.com/cmsc330-umd/spring23/tree/main/discussions/d8_cfg)
 + [Discussion 9 - Lexing, Parsing, Interpreting](https://github.com/cmsc330-umd/spring23/tree/main/discussions/d9_parsing)
++ [Discussion 10 - Lambda Calculus](https://github.com/cmsc330-umd/spring23/tree/main/discussions/d10_lambda_calc)
++ [Discussion 11 - Rust](https://github.com/cmsc330-umd/spring23/tree/main/discussions/d11_rust)

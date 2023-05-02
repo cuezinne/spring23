@@ -1,5 +1,5 @@
 # Project 4B: MicroCaml Interpreter
-Due: April 23th, 2023, 11:59PM (Late: April 24th, 2023, 11:59PM)
+Due: ~~April 23th, 2023, 11:59PM (Late: April 24th, 2023, 11:59PM)~~ April 30th, 2023, 11:59PM (Late: May 1st, 2023, 11:59PM)
 
 Points: 48 public, 52 semipublic
 
@@ -22,7 +22,7 @@ In your code, you may use any standard library functions, but the ones that will
 You can submit by either running `gradescope-submit` or `submit` (if you have installed the new version of gradescope submit on your computer).
 Instructions to use the new optional submit process can be found [here](./GRADESCOPE_SUBMIT.md)
 
-You can also manually submit to [Gradescope](https://www.gradescope.com). *You may only submit the `eval.ml` file.*
+You can also manually submit to [Gradescope](https://www.gradescope.com). *You may only submit the `eval.ml`, `lexer.ml`, `parser.ml` files.*
 
 You do not need a working parser and lexer to implement this project --- all testing can be done on abstract syntax trees directly.
 
@@ -223,8 +223,8 @@ Being able to modify the placeholder is made possibly by using references; this 
 
 - `extend env x v` produces an environment that extends `env` with a mapping from `x` to `v`
 - `lookup env x` returns `v` if `x` maps to `v` in `env`; if there are multiple mappings, it chooses the most recent.
-- `extend_tmp x` produces an environment that extends `env` with a mapping from `x` to a temporary placeholder.
-- `update env x v` produces an environment that updates `env` in place, modifying its most recent mapping for `x` to be `v` instead (removing the placeholder).
+- `ref_extend_tmp x` produces an environment that extends `env` with a mapping from `x` to a temporary placeholder.
+- `ref_update env x v` produces an environment that updates `env` in place, modifying its most recent mapping for `x` to be `v` instead (removing the placeholder).
 
 However since references were not covered, we also gave you a variation of these functions that do not use references. If you choose to not use references you will need the `value` type given in the `eval.ml` file as well as the `remove` function that removes a variable,binding pair from an environment.
 
@@ -243,7 +243,7 @@ eval_expr [] (Fun ("x", Fun ("y", Binop (And, ID "x", ID "y"))))
 
 ### FunctionCall
 
-The `FunctionCall` has two subexpressions. We evaluate the first to a `Closure(A,x,e)` (otherwise, a `TypeError` should be raised) and the second to a value *v*. Then we evaluate `e` (the closure's body) in environment `A` (the closure's environment), returning the result.
+The `FunctionCall` has two subexpressions. We evaluate the first subexpression to a `Closure(A,x,e)` (otherwise, a `TypeError` should be raised) and the second subexpression to a value *v*. Then we evaluate `e` (the closure's body) in environment `A` (the closure's environment), returning the result.
 
 ```ocaml
 eval_expr [] (FunctionCall (Value (Int 1), Value (Int 1))) (* TypeError "Not a function" *)
